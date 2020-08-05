@@ -56,7 +56,7 @@ for (i in listaDocumentos){
 }
 
 recuentoMp(listaDocumentos)
-
+summary(acumulado)
 
 #Ejercicio 2 (3 ptos): Los oficios están compuestos por el código al cual pertenecen, 
 #construya una función que almacene los códigos y las temáticas a las que están 
