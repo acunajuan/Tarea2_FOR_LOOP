@@ -38,8 +38,6 @@ listaDocumentos <- list(c("mp","Juan","Christofer"),c("of","av01","ampr"),c("of"
 
 recuentoMp<- function(list){
 
-acumulado <- c()
-
 for (i in listaDocumentos){    
   if(i[1]=="mp"){
     mp<- 0
@@ -49,14 +47,13 @@ for (i in listaDocumentos){
       niños<- niños+(length(i)-1)
     }
     print(paste("Se cuentan con",mp,"mp de",niños,"niños"))
-    acumulado <- c(mp,niños)
-    summary(acumulado)
   }  
-}
+  }
 }
 
 recuentoMp(listaDocumentos)
-summary(acumulado)
+summary(mp)
+summary(niños)
 
 #Ejercicio 2 (3 ptos): Los oficios están compuestos por el código al cual pertenecen, 
 #construya una función que almacene los códigos y las temáticas a las que están 
@@ -156,12 +153,11 @@ for (l in listaDocumentos){
     }
   }
 }    
-print(paste("Se cuentan con",aprobado,"aprobados y",reprobado,"reprobados"))
+print(paste("Llegaron",aprobado+reprobado,"oficios de los cuales:",aprobado,"son aprobados y",reprobado,"reprobados"))
 }
 
 funcionJuez(listaDocumentos)
 
 
-
-#Juan Acuña Vega
-#Curso de Big Data, ICI, Utem 2020
+###Juan Acuña Vega
+###Curso de Big Data, ICI, Utem 2020
